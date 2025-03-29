@@ -1,4 +1,4 @@
-## Ablation study on rank $q$ of the SVD approximation
+# Q8.1: Ablation study on rank $q$ of the SVD approximation
 
 We conducted an ablation study on the SVD rank $q$ across three datasets of varying sizes. The results indicate that increasing q beyond a certain point does not yield continuous performance gains and incurs additional computational cost. Our findings suggest that setting $q$=5 or 7 is optimal, as a small rank is sufficient for nodes to capture neighbor relationship strengths.
 
@@ -9,7 +9,7 @@ We conducted an ablation study on the SVD rank $q$ across three datasets of vary
 | 7     | 90.19    | 73.01       | 66.21      |
 | 10    | 90.37    | 72.97       | 66.45      |
 
-## Ablation study on the number of additional edges $\gamma$ in the rewiring strategy
+# Q8.2: Ablation study on the number of additional edges $\gamma$ in the rewiring strategy
 
 As shown in the Fig. 2 of our paper, the proposed similarity-based graph rewiring method generates a line graph $G^\prime$, where nodes are sequentially connected based on similarity, ensuring each node has at most two neighbors. It obvious that $G^\prime$ is strongly connected.  By adding all edges from $G^\prime$ to the original graph $G$, we obtain the final rewired graph. Compared to the original graph $G$, each node in the rewired graph gains at most two new edges if these edges do not overlap with existing connections.
 
@@ -20,3 +20,5 @@ In the line graph $G^\prime$, the number of additional edges $\gamma$ is fixed. 
 | 2          | 90.42    | 72.89       | 66.16      |
 | 3          | 89.27    | 70.09       | 65.37      |
 | 4          | 84.10    | 65.54       | 62.88      |
+
+# Q9: Comparison Between the Transformer-Based model and our CGNN
